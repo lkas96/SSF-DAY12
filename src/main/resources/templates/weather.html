@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SSF Day 12 Lecture</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .fakeimg {
+        height: 200px;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="p-5 bg-primary text-white text-center">
+      <h1>Server Side Foundation</h1>
+      <p>
+        Accessed Site On:
+        <span data-th-text="${currTime}"></span>
+      </p>
+      <p>
+        Greeting:
+        <span data-th-if="${currHour le 12}">Good Morning</span>
+        <span data-th-unless="${currHour gt 12}">Good Afternoon</span>
+      </p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/lkas96"
+              >Lawson's GitHub</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/lkas96/SSF-DAY11"
+              >Day 11 Lecture</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/lkas96/SSF-DAY12"
+              >Day 12 Lecture</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1>Weather</h1>
+      <p>
+        Weather of <span data-th-text="${city}"></span> will be measured in <span data-th-text="${metrics}"></span>
+      </p>
+    </div>
+
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+      <p>Why are you looking at this. Go away.</p>
+    </div>
+  </body>
+</html>
